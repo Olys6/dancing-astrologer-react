@@ -27,7 +27,7 @@ const HomeCards = () => {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card sx={{ maxWidth: 345 }} className="homeCard homeCard2 animate__animated animate__fadeInDown animate__delay-2s">
+      <Card sx={{ maxWidth: 345 }} className="homeCard homeCard2 animate__animated animate__fadeInDown">
         <CardActionArea href="/natalchartreading">
           <CardMedia
             component="img"
@@ -48,7 +48,7 @@ const HomeCards = () => {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card sx={{ maxWidth: 345 }} className="homeCard homeCard3 animate__animated animate__fadeInDown animate__delay-3s">
+      <Card sx={{ maxWidth: 345 }} className="homeCard homeCard3 animate__animated animate__fadeInDown">
         <CardActionArea href="/natalchartreading">
           <CardMedia
             component="img"
@@ -68,7 +68,7 @@ const HomeCards = () => {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card sx={{ maxWidth: 345 }} className="homeCard homeCard4 animate__animated animate__fadeInDown animate__delay-4s">
+      <Card sx={{ maxWidth: 345 }} className="homeCard homeCard4 animate__animated animate__fadeInDown">
         <CardActionArea href="/natalchartreading">
           <CardMedia
             component="img"
@@ -88,7 +88,7 @@ const HomeCards = () => {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card sx={{ maxWidth: 345 }} className="homeCard homeCard5 animate__animated animate__fadeInDown animate__delay-5s">
+      <Card sx={{ maxWidth: 345 }} className="homeCard homeCard5 animate__animated animate__fadeInDown">
         <CardActionArea href="/natalchartreading">
           <CardMedia
             component="img"
@@ -108,7 +108,7 @@ const HomeCards = () => {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card sx={{ maxWidth: 345 }} className="homeCard homeCard6 animate__animated animate__fadeInDown animate__delay-6s" >
+      <Card sx={{ maxWidth: 345 }} className="homeCard homeCard6 animate__animated animate__fadeInDown" >
         <CardActionArea href="/natalchartreading">
           <CardMedia
             component="img"

@@ -34,13 +34,27 @@ div.navbarItems:hover>div:hover {
   width: 60%;
   margin-left: 20px;
 }
-
 .homeCard {
-  --animate-duration: 0.5s;
+  --animate-delay: 0.1s;
 }
 
-.homeCard {
-  --animate-delay: 0.07s;
+.homeCard1 {
+  --animate-duration: 1s;
+}
+.homeCard2 {
+  --animate-duration: 1.5s;
+}
+.homeCard3 {
+  --animate-duration: 2s;
+}
+.homeCard4 {
+  --animate-duration: 1.5s;
+}
+.homeCard5 {
+  --animate-duration: 2s;
+}
+.homeCard6 {
+  --animate-duration: 2.4s;
 }
 
 .aboutMeButton {
@@ -88,7 +102,31 @@ div.navbarItems:hover>div:hover {
   /* margin-left: -3rem; */
 }
 
+.contactPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.contactBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #524f66;
+  border-radius:20px;
+  padding: 20px 50px 50px 50px;
+  box-sizing: border-box;
+  gap: 2rem;
+}
+
+.firstAndLastname {
+  /* margin-top: 30px; */
+  font-size: 30px;
+  display: flex;
+  gap: 2rem;
+}
 
 @media only screen and (min-width: 1200px) {
   .aboutMeButton {
