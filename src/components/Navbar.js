@@ -8,25 +8,14 @@ const pages = ['Natal Chart Reading', 'Short Reading', 'Forecasting', 'Synastry'
 
 const Navbar = () => {
 
-
-
-
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -40,7 +29,7 @@ const Navbar = () => {
               component="div"
               sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
             >
-              <img style={{ display: "absolute", width: '14rem' }} src="./assets/Dancing Astrologer logo.png" alt="dancing astrologer logo" />
+              <img style={{ width: '14rem' }} src="./assets/Dancing Astrologer logo.png" alt="dancing astrologer logo" />
             </Typography>
           </Link>
 
@@ -73,8 +62,8 @@ const Navbar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <Link key={page} href={`/${page}`}>
+              {pages.map((page, i) => (
+                <Link key={i} href={`/${page}`}>
                   <MenuItem onClick={handleCloseNavMenu} >
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
@@ -95,10 +84,9 @@ const Navbar = () => {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className="navbarItems">
-              {pages.map((page) => (
-                <div>
+              {pages.map((page, i) => (
+                <div key={i}>
                   <Button
-                    key={page}
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                     href={`/${page.toLowerCase().split(" ").join("")}`}

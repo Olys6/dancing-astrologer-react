@@ -5,7 +5,7 @@ const HomeCards = () => {
 
 
 
-  return(
+  return (
     <div className="cards">
       <Card sx={{ maxWidth: 345 }} className="homeCard homeCard1 animate__animated animate__fadeInDown" >
         <CardActionArea href="/natalchartreading">
@@ -21,9 +21,10 @@ const HomeCards = () => {
             </Typography>
             <Typography variant="body1" color="text.secondary">
               This is an in depth analysis of inherent talents and personal dynamics.
-              <hr />
-              <Typography textAlign="center">90 Mins - 160CHF</Typography>
             </Typography>
+            <hr />
+            <Typography textAlign="center">90 Mins - 160CHF</Typography>
+
           </CardContent>
         </CardActionArea>
       </Card>
@@ -41,10 +42,10 @@ const HomeCards = () => {
             </Typography>
             <Typography variant="body1" color="text.secondary">
               get a reading of the sun, moon and ascendant signs.
-              <hr />
-
-              <Typography textAlign="center">25 Mins - 55CHF</Typography>
             </Typography>
+            <hr />
+            <Typography textAlign="center">25 Mins - 55CHF</Typography>
+
           </CardContent>
         </CardActionArea>
       </Card>
@@ -62,9 +63,10 @@ const HomeCards = () => {
             </Typography>
             <Typography variant="body1" color="text.secondary">
               This is an in depth analysis of inherent talents and personal dynamics.
-              <hr />
-              <Typography textAlign="center">90 Mins - 160CHF</Typography>
             </Typography>
+            <hr />
+            <Typography textAlign="center">90 Mins - 160CHF</Typography>
+
           </CardContent>
         </CardActionArea>
       </Card>
@@ -82,9 +84,10 @@ const HomeCards = () => {
             </Typography>
             <Typography variant="body1" color="text.secondary">
               This is an in depth analysis of inherent talents and personal dynamics.
-              <hr />
-              <Typography textAlign="center">90 Mins - 160CHF</Typography>
             </Typography>
+            <hr />
+            <Typography textAlign="center">90 Mins - 160CHF</Typography>
+
           </CardContent>
         </CardActionArea>
       </Card>
@@ -102,9 +105,10 @@ const HomeCards = () => {
             </Typography>
             <Typography variant="body1" color="text.secondary">
               This is an in depth analysis of inherent talents and personal dynamics.
-              <hr />
-              <Typography textAlign="center">90 Mins - 160CHF</Typography>
             </Typography>
+            <hr />
+            <Typography textAlign="center">90 Mins - 160CHF</Typography>
+
           </CardContent>
         </CardActionArea>
       </Card>
@@ -122,9 +126,10 @@ const HomeCards = () => {
             </Typography>
             <Typography variant="body1" color="text.secondary">
               This is an in depth analysis of inherent talents and personal dynamics.
-              <hr />
-              <Typography textAlign="center">90 Mins - 160CHF</Typography>
             </Typography>
+            <hr />
+            <Typography textAlign="center">90 Mins - 160CHF</Typography>
+
           </CardContent>
         </CardActionArea>
       </Card>

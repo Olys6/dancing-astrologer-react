@@ -5,13 +5,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+
 
 const Home = () => {
 
@@ -35,10 +29,13 @@ const Home = () => {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
+
+    {/* --------------------THIS IS THE SIDE PANEL ABOUT ME----------------------- */}
+    
       <div className="aboutMeSidePanel">
         <div className="aboutMeTitleandImage">
           <Typography variant="h3" color="secondary">About Me </Typography>
-          <img style={{ width: "30%", borderRadius: "100%" }} alt="Charlote face" src="Assets/AboutMePicture2.png" />
+          <img style={{ width: "30%", borderRadius: "100%" }} alt="Charlote face" src="./assets/AboutMePicture2.png" />
         </div>
         <Typography variant="h7" textAlign="left" color="secondary" sx={{ width: "90%", paddingBottom: "30px" }}>
           Charlotte Vestrheim (Vesterheim)
@@ -66,6 +63,8 @@ const Home = () => {
     </Box>
   );
 
+  // -------------THIS IS THE END OF THE PANEL ABOUT ME----------------------- 
+
   return (
     <div className="homePage">
 
@@ -91,7 +90,7 @@ const Home = () => {
       <div className="aboutMeSide">
         <div className="aboutMeTitleandImage">
           <Typography variant="h3" color="primary">About Me </Typography>
-          <img style={{ width: "30%", borderRadius: "100%" }} alt="Charlote face" src="Assets/AboutMePicture2.png" />
+          <img style={{ width: "30%", borderRadius: "100%" }} alt="Charlote face" src="./assets/AboutMePicture2.png" />
         </div>
         <Typography variant="p" textAlign="left" sx={{ width: "90%", paddingBottom: "30px" }}>
           Charlotte Vestrheim (Vesterheim)
