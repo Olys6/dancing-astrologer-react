@@ -35,14 +35,14 @@ const Contact = () => {
 
       setEmailError(false)
     }
-    
+
     setEmailError(true)
 
   }
 
   const handleChange = (e) => {
 
-    if (e.target.name === "email" ) {
+    if (e.target.name === "email") {
       if (validator.isEmail(toSend.email)) {
         setEmailError(false)
       } else {
@@ -54,7 +54,7 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    if(success === true) {
+    if (success === true) {
       setTimeout(() => {
         return navigate('/')
       }, 3000)
@@ -65,44 +65,92 @@ const Contact = () => {
     <div className="contactPage">
       <form onSubmit={sendEmail} className="contactBox">
         <Typography variant="h2" color="secondary">Contact</Typography>
-        {success && <Alert severity="success" className="loginAlert animate__animated animate__bounceIn">Success! You will soon be redirected to the home page</Alert>}
-        {isError && <Alert severity="error" className="loginAlert animate__animated animate__bounceIn">Error - Please try again later</Alert>}
+        {success ?
+          <>
+            {success && <Alert severity="success" className="loginAlert animate__animated animate__bounceIn">Success! You will soon be redirected to the home page</Alert>}
+            {isError && <Alert severity="error" className="loginAlert animate__animated animate__bounceIn">Error - Please try again later</Alert>}
 
-        <div className="firstAndLastname">
-          <TextField label="First Name" text="secondary" color="secondary" variant="filled" focused required name="first_name" value={toSend.first_name} onChange={handleChange} />
-          <TextField label="Last Name" text="secondary" color="secondary" variant="filled"  required name="last_name" value={toSend.last_name} onChange={handleChange} />
-        </div>
-        {!emailError ?
-          <TextField fullWidth label="Email" color="secondary" variant="filled" required name="email" value={toSend.email} onChange={handleChange} />
-        :
-          <TextField sx={{ marginBottom: "-23px" }} error fullWidth label="Email" helperText="Invalid Email" color="secondary" variant="filled" required name="email" value={toSend.email} onChange={handleChange} />
+            <div className="firstAndLastname">
+              <TextField disabled label="First Name" text="secondary" color="secondary" variant="filled" focused required name="first_name" value={toSend.first_name} onChange={handleChange} />
+              <TextField disabled label="Last Name" text="secondary" color="secondary" variant="filled" required name="last_name" value={toSend.last_name} onChange={handleChange} />
+            </div>
+            {!emailError ?
+              <TextField disabled fullWidth label="Email" color="secondary" variant="filled" required name="email" value={toSend.email} onChange={handleChange} />
+              :
+              <TextField disabled sx={{ marginBottom: "-23px" }} error fullWidth label="Email" helperText="Invalid Email" color="secondary" variant="filled" required name="email" value={toSend.email} onChange={handleChange} />
+            }
+
+
+            <TextField
+              disabled
+              fullWidth
+              label="Subject"
+              rows={4}
+              variant="filled"
+              color="secondary"
+              name="subject"
+              required
+              value={toSend.subject}
+              onChange={handleChange}
+            />
+
+            <TextField
+              disabled
+              fullWidth
+              label="Enquiry"
+              multiline
+              rows={4}
+              variant="filled"
+              color="secondary"
+              name="enquiry"
+              required
+              value={toSend.enquiry}
+              onChange={handleChange}
+            />
+          </>
+          :
+          <>
+            {success && <Alert severity="success" className="loginAlert animate__animated animate__bounceIn">Success! You will soon be redirected to the home page</Alert>}
+            {isError && <Alert severity="error" className="loginAlert animate__animated animate__bounceIn">Error - Please try again later</Alert>}
+
+            <div className="firstAndLastname">
+              <TextField label="First Name" text="secondary" color="secondary" variant="filled" focused required name="first_name" value={toSend.first_name} onChange={handleChange} />
+              <TextField label="Last Name" text="secondary" color="secondary" variant="filled" required name="last_name" value={toSend.last_name} onChange={handleChange} />
+            </div>
+            {!emailError ?
+              <TextField fullWidth label="Email" color="secondary" variant="filled" required name="email" value={toSend.email} onChange={handleChange} />
+              :
+              <TextField sx={{ marginBottom: "-23px" }} error fullWidth label="Email" helperText="Invalid Email" color="secondary" variant="filled" required name="email" value={toSend.email} onChange={handleChange} />
+            }
+
+
+            <TextField
+              fullWidth
+              label="Subject"
+              rows={4}
+              variant="filled"
+              color="secondary"
+              name="subject"
+              required
+              value={toSend.subject}
+              onChange={handleChange}
+            />
+
+            <TextField
+              fullWidth
+              label="Enquiry"
+              multiline
+              rows={4}
+              variant="filled"
+              color="secondary"
+              name="enquiry"
+              required
+              value={toSend.enquiry}
+              onChange={handleChange}
+            />
+          </>
         }
-        
-        
-        <TextField
-          fullWidth
-          label="Subject"
-          rows={4}
-          variant="filled"
-          color="secondary"
-          name="subject"
-          required
-          value={toSend.subject}
-          onChange={handleChange}
-        />
 
-        <TextField
-          fullWidth
-          label="Enquiry"
-          multiline
-          rows={4}
-          variant="filled"
-          color="secondary"
-          name="enquiry"
-          required
-          value={toSend.enquiry}
-          onChange={handleChange}
-        />
         <Button color="secondary" variant="contained" type="submit" value="send">Submit</Button>
       </form>
     </div >
